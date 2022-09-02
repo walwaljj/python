@@ -23,3 +23,4 @@ for i in range(11) :
     sum+=i
 print(sum)
 print(f'1부터 {i}까지 숫자의 합은 :{sum}')
+print('i={},t={}'.format(i,sum))
