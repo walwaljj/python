@@ -1,3 +1,1 @@
-
-# for ch, count in items:
-#     print(f'{ch} : {count}')
+article = [ch for ch in article if ch not in [' ', '\n', '\'','\"', '.']]

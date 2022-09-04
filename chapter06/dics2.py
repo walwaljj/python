@@ -8,17 +8,19 @@ keywords = {}
 
 count = 0
 while True :
-    keyword = input('검색어를 입력하세요 : ')
-    if keyword == 'exit' :
+    keyword = input('검색어를 입력하세요 : ')#key값을 입력받는다.
+    if keyword == 'exit' :#key가 exit면
         
-        break
+        break               # 루프종료
     
-    keywords[keyword] = keywords.get(keyword,0) +1 #중요!
-    # key가 없으면 0을 달라는 말 그리고 검색 횟수를 +1시킴
+    keywords[keyword] = keywords.get(keyword,0) +1 # 
+   #dict[key]=value : 해당 키에 값을 입력, 수정한다. 
+    #.get(key)는 해당 키의 값을 반환한다. 해당 key가 없으면 0을 반환하라는 뜻
+    # +1은 dict[key]= 1..+1..+1.. 등 입력했었던 key에 대해 루프문을 돌며 값을 +1시키라는 뜻
     
     #정렬 , 상위 10개 추출 : 실시간 인기검색어
     
 
 
-for keyword, count in keywords.items():
+for keyword, count in keywords.items():#.items는 키 : 값 을 반환.. 언패킹을 이용해서 keyword : count순으로 저장
     print(f'{keyword} : {count}')

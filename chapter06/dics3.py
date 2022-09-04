@@ -2,6 +2,7 @@ article = ''' Most of us have experienced turbulence while traveling: when your 
 Severe turbulence can put even the most seasoned flier on edge and make five minutes seem like an eternity. Usually it results in nothing more than a bumpy ride, but in the worst cases it can cause damages and injuries.'''
 
 #문자열에 나오는 글자의 출현 횟수 계산하기
+article = [ch for ch in article if ch not in [' ', '\n', '\'','\"', '.']]
 
 spel_count = {}#빈 딕셔너리 생성
 
@@ -24,7 +25,7 @@ for ch in article :#문자열은 리스트로 사용가능, ch에 요소를 하�
 
 for ch, count in spel_count.items():
     print(f'{ch} : {count}')
-
+print("-----------------------------")
 #정렬하기 
 #1- 먼저 list로 형변환
 ch_list = list (spel_count) #==ch_list = list (spel_count.keys()) -> 사전을 list로 형변환하면 키값이 담긴다
@@ -32,7 +33,7 @@ print(ch_list)
 '''결과 :[' ', 'M', 'o', 's', 't', 'f', 'u', 'h', 'a', 'v', 'e',
  'x', 'p', 'r', 'i', 'n', 'c', 'd', 'b', 'l', 'w', 'g', ':'
  , 'y', 'm', '.', '\n', 'S', 'k', 'U', ',', 'j']'''
-
+print("-----------------------------")
 ch_list.sort()#리스트를 정렬하는 메소드
 '''sort(*, key: None = ..., reverse: bool = ...) -> None
 
@@ -41,13 +42,13 @@ sort(*, key: (Any) -> SupportsRichComparison, reverse: bool = ...) -> None'''
 
 for key in ch_list:
     print(f'{key} : {spel_count[key]}')
-
+print("-----------------------------")
 #list(spel_count.values()) 벨류값뽑고 정렬가능 , 그러나 벨류에 대응하는 키값을 알 수 없다.
 #  print(f'{key} : {spel_count[key]}')불가능.
 
-items = list(spel_count.values())# 키와 values가 튜플로 들어있음.
+items = list(spel_count.items())# 키와 values가 튜플로 들어있음.
 print(items)
-
+print("-----------------------------")
 def what(x):
     # pass #정의 하지 않았지만 문법에러를 pass시키게 하는 키워드.
     # print(x)
@@ -61,8 +62,10 @@ items.sort(key=what, reverse=True)#매개변수=함수// list 에 담겨있는 �
 for ch, count in items:
     print(f'{ch} : {count}')
 
+print("-----------------------------")
+
 #[' ', '\n', '\'','\"', '.'] 이 문자열을 제외 하고 정렬하기
-article = [ch for ch in article if ch not in [' ', '\n', '\'','\"', '.']]
+
 
 #빈도수가 높은 앞 5개만 출력하고 싶을때 
 for ch, count in items[:5]: # Top-N 문자 상위 N개만 추출함.
