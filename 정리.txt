@@ -1,9 +1,33 @@
-list
-tuple 
-----읽기 전용..
-----빈 튜플
-    파이썬에서 셀렉트문은 튜플로 리턴이 된다.
-    ㄴ처리결과를 튜플()로 받을 때 처리된 결과가 없다라는 뜻/
-    
-dict
-set 
+1.내부
+2.내가만든
+3.외부
+-- 실전에서는 프로젝트 1개당 가상환경 1개.
+이클립스에서 프로젝트생성때 
+mqttex maven project
+   ㄴjdbc
+   ㄴpaho
+:내가원하는 라이브러리 버전을 임의 선택해 구성할 수 있다.
+
+파이썬은 라이브러리를 전역레벨에서 다운을 받는다
+paho
+   ㄴPIL : exo1,ex02 버전이 달라도 전부 하나의 pil을 씀. 
+
+상황 : ex01 에서 업그레이드버전으로 업데이트해서 ex02를 쓰고싶을때
+    가상환경을 만들어줌
+    f1 -> interpreter ->'base'(가상환경임) 아나콘다 설치시 기본으로 제공.
+    ps 라고 뜨면 
+    디폴트가 커맨드창이아니라 파워쉘이기때문에
+    vscode의 terminal에 +를 누르고 cmd로 설정.
+
+
+>>>conda env list
+
+(base) C:\python>conda env list
+# conda environments:
+#
+base                  *  C:\ProgramData\Anaconda3 #*액티브 중이라는 뜻
+
+다른 사람의(외부의) 모듈을 다운받고 싶을 때 
+>>>pip install 패키지명
+
+   

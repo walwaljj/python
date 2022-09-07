@@ -1,0 +1,8 @@
+f=open('foo.txt','r')
+s=f.readline()
+print(s,end='')
+s=f.readline()
+print(s.strip())
+s=f.readline()
+print(s,end='')
+f.close()
