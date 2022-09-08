@@ -1,4 +1,9 @@
+import os,sys
+
 fname = input('입력할 파일의 이름: ')
+if not os.path.exists(fname):
+    print(fname,"이 존재하지 않습니다.")
+    sys.exit(0)                                #파일이 존재하지 않으면 exit()로 종료를 시킴
 f= open(fname,'r')#입력받은 파일을 'r' 읽기모드로 f에저장
 n = 1               #라인출력을 위해 변수 선언
 l = f.readline()    #파일 한줄씩 읽을 변수l선언

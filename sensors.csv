@@ -1,9 +1,9 @@
 ID,PLACE,TYPE,VALUE,CREATED_AT
-1,livingroom,humi,50.7,"2022-08-31 11:32:24"
-2,livingroom,temp,26.7,"2022-08-31 11:32:24"
-5,livingroom,humi,50.7,"2022-08-31 11:33:07"
-6,livingroom,temp,26.7,"2022-08-31 11:33:07"
-7,bedroom,humi,40.2,"2022-08-31 11:33:07"
-8,bedroom,temp,25.7,"2022-08-31 11:33:07"
-9,bedroom,temp,24.5,"2022-08-31 12:26:37"
-10,bedroom,temp,24.6,"2022-08-31 12:26:42"
+1,livingroom,humi,50.7,2022-08-31 11:32:24
+2,livingroom,temp,26.7,2022-08-31 11:32:24
+5,livingroom,humi,50.7,2022-08-31 11:33:07
+6,livingroom,temp,26.7,2022-08-31 11:33:07
+7,bedroom,humi,40.2,2022-08-31 11:33:07
+8,bedroom,temp,25.7,2022-08-31 11:33:07
+9,bedroom,temp,24.5,2022-08-31 12:26:37
+10,bedroom,temp,24.6,2022-08-31 12:26:42

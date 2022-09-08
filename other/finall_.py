@@ -1,0 +1,1 @@
+#path.splitext("images/dog/aaaa.png") => ('images/dog/aaaa'.'.png')로 알 수 있게함
