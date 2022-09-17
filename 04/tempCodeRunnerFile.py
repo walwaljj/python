@@ -1,1 +1,0 @@
-return ttl/len(num1)
