@@ -18,4 +18,4 @@ if (a and b > 0) and 1<= i<= 4:
     elif i == 4 :
         print(f'{a} / {b} = {a / b}')
 else :
-    print("잘못 입력하였습니다.")
+    print("잘못 입력하였습니다.") 
