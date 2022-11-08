@@ -1,1 +1,0 @@
- # second_num = ''.join(result_list2[-4:])
