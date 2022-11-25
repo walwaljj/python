@@ -6,7 +6,9 @@ def find_min(n_list):
     min_value = n_list[0]#n_list[] 의 값을 저장하는 변수
     min_index = 0 
     for ix,n in enumerate(n_list):
+        print(n,min_value)
         if n < min_value: #최소값을 변경 
+
             min_value = n 
             min_index = ix
     return min_index

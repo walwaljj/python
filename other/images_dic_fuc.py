@@ -22,17 +22,18 @@ def get_category_images(base):
     return images
 
 def save (fpath,data) :
+    #save('category.dat',category_images)매개변수로 파일명,위 함수로 인해 파일명이 담긴 객체
     try :
-        with open(fpath,'wb') as file :
-            pickle.dump(data,file)
+        with open(fpath,'wb') as file :#첫 인자인 파일을 w로 오픈, 별칭을 file로 줌.
+            pickle.dump(data,file)#피클.dump로 두번쨰 인자data내용을 첫 인자로 받은 파일객체fpath에 저장?
     except Exception as e:
         print(f"{fpath} 파일쓰기 실패")
         print(e)
 
-def load(fpath):
+def load(fpath):#파일을매개변수로받음
     try :
-        with open(fpath, 'rb')as file :
-            data = pickle.load(file)
+        with open(fpath, 'rb')as file :#읽을 파일을 오픈하고 별칭을 file로 줌
+            data = pickle.load(file)#pickle.load의 매개변수로 파일
             return data
     except :
         print(f"{fpath}파일 읽기에 실패했습니다.")
@@ -46,7 +47,7 @@ def load(fpath):
 #         file_path = path.join(base,dir,fname)#join으로 파일 디렉토리/디렉토리/파일 순으로 합치고 변수에 담음.
 #         print(file_path)#파일의 경로를 만들어냄. images\cat\cat1.png 
 # 
-category_images = get_category_images(base)
+category_images = get_category_images(base) #cat1.png...
 save('category.dat',category_images)
 
 data = load('category.dat')
