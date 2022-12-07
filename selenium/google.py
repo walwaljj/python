@@ -40,4 +40,4 @@ for image in images :
   exceot :
     pass
   
-driver.close() # 브라우저 닫기
+driver.close() # 브라우저 닫기 
