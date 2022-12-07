@@ -30,10 +30,14 @@ images = driver.find_elements_by_css_selector(".rg_i.Q4LuWd") #작은이미지�
 count = 1
 
 for image in images : 
-  image.click()# 작은이미지를 선택
-  time.sleep(3) # 로딩까지 기다리기
-  imgUrl = driver.find_element_by_css_selector(".n3VNCb").get_attribute("src")# 큰이미지의 주소를 저장
-  urllib.request.urlretrieve(imgUrl, str(count) + ".jpg")# 이미지를 저장
-  count = count +1 # 숫자를 늘려가며 이미지 이름을 1.2.3.. .jpg로 저장하기위함.
+  try :
+    image.click()# 작은이미지를 선택
+    time.sleep(2) # 로딩까지 기다리기
+    imgUrl = driver.find_element_by_css_selector(".n3VNCb").get_attribute("src")# 큰이미지의 주소를 저장
+    #                                  _xpath() <-xpath로 정확하게 선택가능. class 선택시 광범위로 인한 오류를 해결할 수 있다.
+    urllib.request.urlretrieve(imgUrl, str(count) + ".jpg")# 이미지를 저장
+    count = count +1 # 숫자를 늘려가며 이미지 이름을 1.2.3.. .jpg로 저장하기위함.
+  exceot :
+    pass
   
 driver.close() # 브라우저 닫기
